@@ -13,7 +13,8 @@ Parameters:
   sigAdj   - used to adjust outliers
   
 
-Algorithm:	
+Algorithm:
+
 	1. Set Iteration =1;
 	2. Compute z-scores (cross-sectional) for all the raw ratios in the base universe selected
 	    If All |z-score| < 5, use this z-score as the final result. Stop iterative process.
