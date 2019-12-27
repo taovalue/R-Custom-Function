@@ -4,18 +4,13 @@ Custom built functions
 ## ZWins.r
 This function use below custom logic to winsorize data (up to 100 iterations)
 
-Parameters:
+### Parameters:
+#### data     - vector raw data
+#### sigCheck - used to check whether Z Score of raw data is out side of this check threshold;
+#### sigAdj   - used to adjust outliers
 
-  data     - vector raw data
-  
-  sigCheck - used to check whether Z Score of raw data is out side of this check threshold;
-  
-  sigAdj   - used to adjust outliers
-  
-
-Algorithm:
-
-	1. Set Iteration =1;
+### Algorithm:
+#### * Set Iteration =1;
 	2. Compute z-scores (cross-sectional) for all the raw ratios in the base universe selected
 	    If All |z-score| < 5, use this z-score as the final result. Stop iterative process.
 	    If Any |z-score| >= 5, then flag any instance that has a z-score > |3| as outlier 
