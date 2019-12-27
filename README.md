@@ -7,8 +7,11 @@ This function use below custom logic to winsorize data (up to 100 iterations)
 Parameters:
 
   data     - vector raw data
+  
   sigCheck - used to check whether Z Score of raw data is out side of this check threshold;
+  
   sigAdj   - used to adjust outliers
+  
 
 Algorithm:	
 	1. Set Iteration =1;
