@@ -1,6 +1,10 @@
 # R-Custom-Function
 Custom built functions
 
+Table of content:
+* [Zwins]()
+* [NoNeg]()
+
 ## ZWins.r
 This function use below custom logic to winsorize data (up to 100 iterations)
 
