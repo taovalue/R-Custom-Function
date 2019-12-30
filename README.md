@@ -20,3 +20,12 @@ This function use below custom logic to winsorize data (up to 100 iterations)
       raw ratios < (new_mean - 3*new_stdev), then replace it with new_mean - 3*new_stdev
 	5. Iteration = Iteration + 1;
 	6. Repeat steps 2 to 5. End process at 2.1 or until Iteration = 4, whichever is earliest.
+
+## NoNeg.r
+This function checks all values and transform all negative values to 0. This is useful when certain derived fundemental finanical metrics (e.g. sales, receivables) are negative due to missed reporting or restatements. They should be treated as 0 in certain aggregation.
+
+#### Parameters:
+	data 	- vector for NoNeg; data frame for NoNeg.df
+
+### Algorithm:
+	simply check whether value is negative, if so change it o 0, otherwise leave the original value
