@@ -2,8 +2,8 @@
 Custom built functions
 
 Table of content:
-* [Zwins]()
-* [NoNeg]()
+* [Zwins](https://github.com/taovalue/R-Custom-Function#zwinsr)
+* [NoNeg](https://github.com/taovalue/R-Custom-Function#nonegr)
 
 ## ZWins.r
 This function use below custom logic to winsorize data (up to 100 iterations)
