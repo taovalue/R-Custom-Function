@@ -29,3 +29,26 @@ This function checks all values and transform all negative values to 0. This is 
 
 ### Algorithm:
 	simply check whether value is negative, if so change it o 0, otherwise leave the original value
+```
+NoNeg <- function(data = NULL) {
+  require(dplyr)
+  
+  case_when(data < 0 ~ 0,
+            TRUE ~ data)
+}
+
+NoNeg.df <- function(data = NULL) {
+  require(dplyr)
+  
+  d = dim(data)
+  n = names(data)
+  
+  z = lapply(X = as.list(data), FUN = NoNeg)
+  z = unlist(z)
+  dim(z) = d
+  z = as.data.frame(z)
+  names(z) = n
+  return(z)
+  
+}
+```
